@@ -69,7 +69,7 @@ if (isset($_POST['tambah'])) {
       </div>
       <div class="row">
         <div class="col">
-          <button class="waves-effect waves-light btn-small" type="submit" name="tambah" style="width: 150px">Tambah
+          <button class="waves-effect waves-light btn-small" type="submit" name="tambah" style="width: 150px">Tambah Data!
             <i class="material-icons right">send</i>
           </button>
         </div>
