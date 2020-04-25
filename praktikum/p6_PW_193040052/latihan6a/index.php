@@ -19,6 +19,9 @@ $foods = query("SELECT * FROM foods");
   <!--Let browser know website is optimized for mobile-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
   <title>iFood</title>
 </head>
 
@@ -27,9 +30,9 @@ $foods = query("SELECT * FROM foods");
     <div class="row">
       <?php foreach ($foods as $food) : ?>
         <div class="col s3 m3">
-          <div class="card small">
+          <div class="card small" style="height: 350px">
             <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="assets/img/<?= $food['foto'] ?>">
+              <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
             </div>
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?><i class="material-icons right">more_vert</i></span>

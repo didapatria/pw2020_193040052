@@ -20,6 +20,10 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
 <body>
   <div class="container">
     <h2 style="text-align: center">Daftar Mahasiswa</h2>
+
+    <a href="tambah.php" class="waves-effect waves-light btn-small">Tambah Data Mahasiswa</a>
+    <br><br>
+
     <div class="row">
       <?php foreach ($mahasiswa as $m) : ?>
         <div class="col s3 m3">
