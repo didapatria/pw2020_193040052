@@ -30,12 +30,12 @@ $foods = query("SELECT * FROM foods");
     <div class="row">
       <?php foreach ($foods as $food) : ?>
         <div class="col s3 m3">
-          <div class="card small" style="height: 350px">
+          <div class="card small card-cover">
             <div class="card-image waves-effect waves-block waves-light">
               <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
             </div>
             <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?><i class="material-icons right">more_vert</i></span>
+              <span class="card-title activator grey-text text-darken-4 card-title"><?= $food['nama'] ?><i class="material-icons right">more_vert</i></span>
               <p><a href="php/detail.php?id=<?= $food['id'] ?>" class="waves-effect waves-light btn-small">Detail</a></p>
             </div>
             <div class="card-reveal">

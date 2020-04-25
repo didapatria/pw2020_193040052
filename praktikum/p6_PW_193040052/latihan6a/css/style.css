@@ -1,6 +1,14 @@
+.card-cover {
+  min-height: 350px;
+}
+
 .img-cover {
   width: 200px;
   height: 200px;
   object-fit: cover;
   object-position: center center;
-  }
+}
+
+.card-title {
+  min-height: 70px;
+}
