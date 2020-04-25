@@ -36,15 +36,13 @@ if (isset($_GET['keyword'])) {
     <nav>
         <div class="nav-wrapper teal">
             <a href="#!" class="brand-logo"><i class="material-icons">food</i>iFood</a>
-            <div class="right hide-on-med-and-down">
+            <div class="right hide-on-med-and-down nav-wrapper">
                 <form action="" method="get">
                     <div class="input-field">
                         <input id="search" type="search" name="keyword" autofocus>
                         <label type="submit" name="cari" class="label-icon" for="search"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
-                    <!-- <input type="text" name="keyword" id="" autofocus>
-                    <button type="submit" name="cari">Cari!</button> -->
                 </form>
             </div>
         </div>

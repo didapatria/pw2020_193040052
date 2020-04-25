@@ -1,0 +1,155 @@
+/*
+  Created by: Dida Patria
+  Daftar Isi:
+  - CSS Utilities (untuk memudahkan mengcustom class secara global)
+  - Custom Materialize
+*/
+
+/*
+  CSS Utilities
+  1.1 Padding
+  1.2 Margin
+
+  Info Penamaan :
+  ---------------------------------
+  *a = .. + all
+  ---------------------------------
+  *l = .. + left
+  *r = .. + right
+  *x = .. + sumbu x (left + right)
+  ---------------------------------
+  *t = .. + top
+  *b = .. + bottom
+  *y = .. + sumbu y (top + bottom)
+  --------------------------------- 
+*/
+/* 1.1 Padding */
+.pa-0 {
+  padding: 0 !important;
+}
+  .px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+    .pl-0 {
+      padding-left: 0 !important;
+    }
+    .pr-0 {
+      padding-right: 0 !important;
+    }
+
+  .py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+    .pt-0 {
+      padding-top: 0 !important;
+    }
+    .pb-0 {
+      padding-bottom: 0 !important;
+    }
+
+/* 1.2 Margin */
+.ma-0 {
+  margin: 0 !important;
+}
+  .mx-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+    .ml-0 {
+      margin-left: 0 !important;
+    }
+    .mr-0 {
+      margin-right: 0 !important;
+    }
+
+  .my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+    .mt-0 {
+      margin-top: 0 !important;
+    }
+    .mb-0 {
+      margin-bottom: 0 !important;
+    }
+
+/*
+  CUSTOM MATERIALIZE
+  2.1 Header
+  2.2 Sidenav
+  2.3 Breadcrumb
+*/
+header.open, 
+main.open, 
+footer.open {
+  padding-left: 300px;
+}
+
+/* 2.1 Header */
+header.open .title {
+  display: none;
+}
+header .brand-logo {
+  padding: 0 15px;
+}
+header .dropdown-content {
+  top: 50px !important;
+}
+header nav {
+  background: #8c0e0e;
+}
+/* 2.2 Sidenav */
+.sidenav.close {
+  -webkit-transform: translateX(-100%) !important;
+  transform: translateX(-100%) !important;
+}
+.sidenav {
+  background: #bb0e0e;
+  color: #ffffff;
+}
+.sidenav li>a {
+  color: #ffffff;
+}
+.sidenav li.active,
+.sidenav li>a:hover {
+  background: #8c0e0e;
+}
+
+/* Breadcrumb */
+.breadcrumb-area {
+  margin: 2.3733333333rem 0 1.424rem 0;
+}
+.color-grey .breadcrumb,
+.color-grey .breadcrumb:before {
+  color: #c6c6c6;
+  margin: 0;
+}
+.color-grey .breadcrumb:before {
+  font-size: unset;
+}
+.color-grey .breadcrumb:last-child {
+  color: #333333;
+}
+
+/* Card */
+.card-cover {
+  min-height: 350px;
+}
+.img-cover {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center center;
+}
+.card-title {
+  min-height: 70px;
+}
+
+/* Responsive */
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
