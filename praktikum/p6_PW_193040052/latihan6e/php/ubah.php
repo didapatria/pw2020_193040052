@@ -2,7 +2,7 @@
 require 'functions.php';
 
 $id = $_GET['id'];
-$foods = query("SELECT * FROM food WHERE id = $id")[0];
+$food = query("SELECT * FROM foods WHERE id = $id")[0];
 
 // cek apakah tombol sudah ditekan
 if (isset($_POST['ubah'])) {
@@ -37,41 +37,46 @@ if (isset($_POST['ubah'])) {
 
 <body>
   <div class="container">
-    <h3>Form Tambah Data Makanan</h3>
+    <h3>Form Ubah Data Makanan</h3>
     <form action="" method="POST">
       <div class="row">
         <div class="input-field col s12">
-          <input id="nama" type="hidden" name="nama" class="validate" autofocus required>
+          <input id="id" type="hidden" name="id" class="validate" value="<?= $food['id']; ?>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="nama" type="text" name="nama" class="validate" autofocus required value="<?= $food['nama']; ?>">
           <label for="nama">Nama Makanan</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="foto" type="hidden" name="foto" class="validate" required value="<?= $food['nama']; ?>">
+          <input id="foto" type="text" name="foto" class="validate" required value="<?= $food['foto']; ?>">
           <label for="foto">Foto</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="porsi" type="hidden" name="porsi" class="validate" required value="<?= $food['porsi']; ?>">
+          <input id="porsi" type="text" name="porsi" class="validate" required value="<?= $food['porsi']; ?>">
           <label for="porsi">Porsi</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="bahan" type="hidden" name="bahan" class="validate" required value="<?= $food['bahan']; ?>">
+          <input id="bahan" type="text" name="bahan" class="validate" value="<?= $food['bahan']; ?>">
           <label for="bahan">Bahan</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="caramasak" type="hidden" name="caramasak" class="validate" required value="<?= $food['caramasak']; ?>">
+          <input id="caramasak" type="text" name="caramasak" class="validate" value="<?= $food['caramasak']; ?>">
           <label for="caramasak">Cara Masak</label>
         </div>
       </div>
       <div class="row">
         <div class="col">
-          <button class="waves-effect waves-light btn-small" type="submit" name="tambah" style="width: 200px">Ubah Data!
+          <button class="waves-effect waves-light btn-small" type="submit" name="ubah" style="width: 200px">Ubah Data!
             <i class="material-icons right">send</i>
           </button>
         </div>

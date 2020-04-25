@@ -57,7 +57,7 @@ if (isset($_GET['keyword'])) {
         </div>
         <div class="row">
             <div class="col">
-                <a href="tambah.php" class="waves-effect waves-light btn-small">Tambah Data Mahasiswa</a>
+                <a href="tambah.php" class="waves-effect waves-light btn-small">Tambah Data Makanan</a>
             </div>
         </div>
         <table border="1" cellpadding="10" cellspacing="0" style="text-align: center">
@@ -82,11 +82,11 @@ if (isset($_GET['keyword'])) {
                     <tr>
                         <td><?= $i ?></td>
                         <td>
-                            <a href="ubah.php?id=2" class="waves-effect waves-light btn-small">Ubah</a>
-                            <a href="hapus.php?id=<?php $food['id'] ?>" onclick="return confirm('Hapus Data')" class="waves-effect waves-light btn-small">Hapus</a>
+                            <a href="ubah.php?id=<?= $food['id'] ?>" class="waves-effect waves-light btn-small">Ubah</a>
+                            <a href="hapus.php?id=<?= $food['id'] ?>" onclick="return confirm('Hapus Data')" class="waves-effect waves-light btn-small">Hapus</a>
                         </td>
                         <td><img class="img-cover" src="../assets/img/<?= $food['foto'] ?>" alt=""></td>
-                        <td><?= $food['nama'] ?><?= $food['id'] ?></td>
+                        <td><?= $food['nama'] ?></td>
                         <td><?= $food['porsi'] ?></td>
                         <td>
                             <div class="food-content"><?= $food['bahan'] ?></div>

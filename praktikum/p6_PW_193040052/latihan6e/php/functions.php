@@ -68,7 +68,7 @@ function ubah($data)
                 foto = '$foto',
                 porsi = '$porsi',
                 bahan = '$bahan',
-                caramasak = '$caramasak',
+                caramasak = '$caramasak'
             WHERE id = '$id' ";
     mysqli_query($conn, $queryubah);
     echo mysqli_error($conn);
