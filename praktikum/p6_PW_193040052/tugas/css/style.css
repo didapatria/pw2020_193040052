@@ -77,9 +77,11 @@
 
 /*
   CUSTOM MATERIALIZE
-  2.1 Header
-  2.2 Sidenav
-  2.3 Breadcrumb
+  2.1 Body
+  2.2 Header
+  2.3 Sidenav
+  2.4 Breadcrumb
+  2.5 Card
 */
 header.open, 
 main.open, 
@@ -87,7 +89,12 @@ footer.open {
   padding-left: 300px;
 }
 
-/* 2.1 Header */
+/* 2.1 Body */
+body.bgcolor {
+  background: #bb0e0e;
+}
+
+/* 2.2 Header */
 header.open .title {
   display: none;
 }
@@ -100,7 +107,7 @@ header .dropdown-content {
 header nav {
   background: #8c0e0e;
 }
-/* 2.2 Sidenav */
+/* 2.3 Sidenav */
 .sidenav.close {
   -webkit-transform: translateX(-100%) !important;
   transform: translateX(-100%) !important;
@@ -117,7 +124,11 @@ header nav {
   background: #8c0e0e;
 }
 
-/* Breadcrumb */
+.container-color {
+  background: #c6c6c6;
+}
+
+/* 2.4 Breadcrumb */
 .breadcrumb-area {
   margin: 2.3733333333rem 0 1.424rem 0;
 }
@@ -133,7 +144,7 @@ header nav {
   color: #333333;
 }
 
-/* Card */
+/* 2.5 Card */
 .card-cover {
   min-height: 350px;
 }

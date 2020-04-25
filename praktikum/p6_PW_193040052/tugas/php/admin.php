@@ -61,7 +61,7 @@ if (isset($_GET['keyword'])) {
             <!-- Dropdown Structure -->
             <ul id="dropdown1" class="dropdown-content">
               <li><a href="#!">Config</a></li>
-              <li><a href="#!">Logout</a></li>
+              <li><a href="../index.php">Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -86,10 +86,10 @@ if (isset($_GET['keyword'])) {
     <li>
       <div class="divider mt-0"></div>
     </li>
-    <li><a class="waves-effect" href="#!">Logout</a></li>
+    <li><a class="waves-effect" href="../index.php">Logout</a></li>
   </ul>
 
-  <main class="open">
+  <main class="container">
     <div class="row">
       <div class="col">
         <h2 class="mb-0">Selamat Datang

@@ -20,15 +20,22 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
 <html lang="en">
 
 <head>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Author -->
+    <meta name="description" content="Tugas Mata Kuliah">
+    <meta name="author" content="Dida Patria">
+
+    <title>iFood - Detail</title>
+
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iFood - Detail</title>
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -54,6 +61,7 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
     </div>
 
     <!--JavaScript at end of body for optimized loading-->
+    <script src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/materialize.min.js"></script>
 </body>
 

@@ -61,7 +61,7 @@ if (isset($_GET['keyword'])) {
             <!-- Dropdown Structure -->
             <ul id="dropdown1" class="dropdown-content">
               <li><a href="#!">Config</a></li>
-              <li><a href="#!">Logout</a></li>
+              <li><a href="../index.php">Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -86,7 +86,7 @@ if (isset($_GET['keyword'])) {
     <li>
       <div class="divider mt-0"></div>
     </li>
-    <li><a class="waves-effect" href="#!">Logout</a></li>
+    <li><a class="waves-effect" href="../index.php">Logout</a></li>
   </ul>
 
   <main class="open">
@@ -144,11 +144,11 @@ if (isset($_GET['keyword'])) {
                     <div class="food-content"><?= $food['caramasak'] ?></div>
                   </td>
                   <td>
-                    <a href="ubah.php?id=<?= $food['id'] ?>" class="waves-effect waves-light btn-small" type="submit" name="ubah">
+                    <a href="ubah.php?id=<?= $food['id'] ?>" class="waves-effect waves-light btn-small" type="submit" name="ubah" style="width: 110px">
                       <i class="material-icons left">edit</i>
                       Ubah
                     </a>
-                    <a href="hapus.php?id=<?= $food['id'] ?>" onclick="return confirm('Hapus Data')" class="waves-effect waves-light btn-small" type="submit" name="hapus">
+                    <a href="hapus.php?id=<?= $food['id'] ?>" onclick="return confirm('Hapus Data')" class="waves-effect waves-light btn-small" type="submit" name="hapus" style="width: 110px">
                       <i class="material-icons left">delete</i>
                       Hapus
                     </a>
@@ -162,7 +162,7 @@ if (isset($_GET['keyword'])) {
         <?php if (isset($_GET['keyword'])) : ?>
           <div class="row">
             <div class="col">
-              <a href="admin.php" class="waves-effect waves-light btn-small">Refresh</a>
+              <a href="data_masakan.php" class="waves-effect waves-light btn-small">Refresh</a>
             </div>
           </div>
         <?php endif; ?>
@@ -183,6 +183,7 @@ if (isset($_GET['keyword'])) {
 
       $("#burgerNav").click(function() {
         $('header').toggleClass('open');
+        $('main').toggleClass('open');
         $('.sidenav').toggleClass('close');
       });
     });
