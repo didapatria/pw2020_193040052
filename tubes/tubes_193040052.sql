@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2020 at 05:23 AM
+-- Generation Time: Apr 25, 2020 at 03:16 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -33,8 +33,8 @@ CREATE TABLE `foods` (
   `nama` varchar(50) NOT NULL,
   `foto` varchar(20) NOT NULL,
   `porsi` int(2) NOT NULL,
-  `bahan` varchar(255) NOT NULL,
-  `caramasak` varchar(255) NOT NULL
+  `bahan` text NOT NULL,
+  `caramasak` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
