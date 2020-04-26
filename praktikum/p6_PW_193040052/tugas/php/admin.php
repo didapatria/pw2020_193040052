@@ -41,8 +41,8 @@ if (isset($_GET['keyword'])) {
   <header class="open">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" id="burgerNav" class="brand-logo"><i class="material-icons">menu</i> <span class="title">iFood</span></a>
-        <ul class="right hide-on-med-and-down nav-wrapper">
+        <a href="#" id="burgerNav" class="brand-logo burgerNav"><i class="material-icons">menu</i> <span class="title">iFood</span></a>
+        <ul class="right hide-on-med-and-down">
           <!-- Dropdown Trigger -->
           <li>
             <a class="dropdown-trigger" href="#!" data-target="dropdown1">
@@ -51,7 +51,7 @@ if (isset($_GET['keyword'])) {
             <!-- Dropdown Structure -->
             <ul id="dropdown1" class="dropdown-content">
               <li><a href="#!">Config</a></li>
-              <li><a href="../index.php">Keluar</a></li>
+              <li><a class="waves-effect" href="../index.php">Keluar</a></li>
             </ul>
           </li>
         </ul>
@@ -70,8 +70,8 @@ if (isset($_GET['keyword'])) {
     <li>
       <div class="divider mt-0"></div>
     </li>
-    <li class="active"><a class="waves-effect" href="admin.php">Welcome</a></li>
-    <li><a class="waves-effect" href="data_masakan.php">Data Masakan</a></li>
+    <li><a class="waves-effect" href="admin.php">Welcome</a></li>
+    <li class="active"><a class="waves-effect" href="data_masakan.php">Data Masakan</a></li class="active">
     <li><a class="waves-effect" href="#!">Config</a></li>
     <li>
       <div class="divider mt-0"></div>
@@ -106,7 +106,7 @@ if (isset($_GET['keyword'])) {
   </main>
 
   <!--JavaScript at end of body for optimized loading-->
-  <script src="../js/jquery.min.js"></script>
+  <script src=" ../js/jquery.min.js"> </script>
   <script type="text/javascript" src="../js/materialize.min.js"></script>
 
   <!--Custom Js-->
