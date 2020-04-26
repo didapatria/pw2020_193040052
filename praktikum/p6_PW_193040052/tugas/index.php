@@ -41,27 +41,21 @@ if (isset($_GET['keyword'])) {
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo"><i class="material-icons"></i><span class="title">iFood</span></a>
-        <ul class="right hide-on-med-and-down nav-wrapper">
-          <!-- Search -->
-          <li class="nav-wrapper">
-            <form action="" method="get">
-              <div class="input-field">
-                <input id="search" type="search" name="keyword">
-                <label type="submit" name="cari" class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
+        <a href="#" class="brand-logo"><span class="title">iFood</span></a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <form>
+              <div class="input-search">
+                <i class="material-icons prefix">search</i>
+                <input id="cari" name="keyword" type="text" class="validate" placeholder="cari masakan">
               </div>
             </form>
           </li>
-          <!-- Dropdown Trigger -->
           <li>
-            <a class="dropdown-trigger" href="#!" data-target="dropdown1">
-              Adinda Fadhil Patria<i class="material-icons right">arrow_drop_down</i>
+            <a href="php/admin.php" class="btn btn-small waves-effect waves-light white red-text">
+              <i class="material-icons left">directions_walk</i>
+              Masuk
             </a>
-            <!-- Dropdown Structure -->
-            <ul id="dropdown1" class="dropdown-content">
-              <li><a href="php/admin.php">Admin</a></li>
-            </ul>
           </li>
         </ul>
       </div>
@@ -69,52 +63,52 @@ if (isset($_GET['keyword'])) {
   </header>
 
   <div class="container container-color">
-    <div class="row">
-      <?php if (empty($foods)) : ?>
-        <tr>
-          <td colspan="10">
-            <h1>Data Tidak Ditemukan</h1>
-          </td>
-        </tr>
-      <?php else : ?>
-        <?php foreach ($foods as $food) : ?>
-          <div class="col s3 m3">
-            <div class="card small card-cover">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
-              </div>
-              <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4 card-title"><?= $food['nama'] ?><i class="material-icons right">more_vert</i></span>
-                <p><a href="php/detail.php?id=<?= $food['id'] ?>" class="waves-effect waves-light btn-small">Detail</a></p>
-              </div>
-              <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><?= $food['nama'] ?><i class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-              </div>
+    <main>
+      <div class="row">
+        <?php if (empty($foods)) : ?>
+          <tr>
+            <td colspan="10">
+              <h1>Data Tidak Ditemukan</h1>
+            </td>
+          </tr>
+        <?php else : ?>
+          <div class="col s12">
+            <div class="row">
+              <?php foreach ($foods as $food) : ?>
+                <div class="col s4">
+                  <div class="card">
+                    <div class="card-image">
+                      <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?></span>
+                    </div>
+                    <div class="card-action">
+                      <a href="php/detail.php?id=<?= $food['id'] ?>">Detail</a>
+                    </div>
+                  </div>
+                </div>
+              <?php endforeach ?>
             </div>
           </div>
-        <?php endforeach ?>
-      <?php endif; ?>
-    </div>
-    <?php if (isset($_GET['keyword'])) : ?>
-      <div class="row">
-        <div class="col">
-          <a href="index.php" class="waves-effect waves-light btn-small">Refresh</a>
-        </div>
+        <?php endif; ?>
       </div>
-    <?php endif; ?>
+      <?php if (isset($_GET['keyword'])) : ?>
+        <div class="row">
+          <div class="col">
+            <a href="index.php" class="btn btn-small waves-effect waves-light">Refresh</a>
+          </div>
+        </div>
+      <?php endif; ?>
+    </main>
   </div>
 
   <!--JavaScript at end of body for optimized loading-->
   <script src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
 
-  <script>
-    $(document).ready(function() {
-      // mengaktifkan dropdown pada header nav
-      $(".dropdown-trigger").dropdown();
-    });
-  </script>
+  <!--Custom Js-->
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

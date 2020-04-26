@@ -43,16 +43,6 @@ if (isset($_GET['keyword'])) {
       <div class="nav-wrapper">
         <a href="#" id="burgerNav" class="brand-logo"><i class="material-icons">menu</i> <span class="title">iFood</span></a>
         <ul class="right hide-on-med-and-down nav-wrapper">
-          <!-- Search -->
-          <li class="nav-wrapper">
-            <form action="" method="get">
-              <div class="input-field">
-                <input id="search" type="search" name="keyword">
-                <label type="submit" name="cari" class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
-              </div>
-            </form>
-          </li>
           <!-- Dropdown Trigger -->
           <li>
             <a class="dropdown-trigger" href="#!" data-target="dropdown1">
@@ -61,7 +51,7 @@ if (isset($_GET['keyword'])) {
             <!-- Dropdown Structure -->
             <ul id="dropdown1" class="dropdown-content">
               <li><a href="#!">Config</a></li>
-              <li><a href="../index.php">Logout</a></li>
+              <li><a href="../index.php">Keluar</a></li>
             </ul>
           </li>
         </ul>
@@ -80,16 +70,16 @@ if (isset($_GET['keyword'])) {
     <li>
       <div class="divider mt-0"></div>
     </li>
-    <li class="active"><a class="waves-effect" href="#!">Welcome</a></li>
+    <li class="active"><a class="waves-effect" href="admin.php">Welcome</a></li>
     <li><a class="waves-effect" href="data_masakan.php">Data Masakan</a></li>
     <li><a class="waves-effect" href="#!">Config</a></li>
     <li>
       <div class="divider mt-0"></div>
     </li>
-    <li><a class="waves-effect" href="../index.php">Logout</a></li>
+    <li><a class="waves-effect" href="../index.php">Keluar</a></li>
   </ul>
 
-  <main class="container">
+  <main class="open">
     <div class="row">
       <div class="col">
         <h2 class="mb-0">Selamat Datang
@@ -119,19 +109,8 @@ if (isset($_GET['keyword'])) {
   <script src="../js/jquery.min.js"></script>
   <script type="text/javascript" src="../js/materialize.min.js"></script>
 
-  <script>
-    $(document).ready(function() {
-      $('.sidenav').sidenav();
-
-      // mengaktifkan dropdown pada header nav
-      $(".dropdown-trigger").dropdown();
-
-      $("#burgerNav").click(function() {
-        $('header').toggleClass('open');
-        $('.sidenav').toggleClass('close');
-      });
-    });
-  </script>
+  <!--Custom Js-->
+  <script type="text/javascript" src="../js/main.js"></script>
 </body>
 
 </html>

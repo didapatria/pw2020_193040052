@@ -30,8 +30,8 @@ function tambah($data)
     $nama = htmlspecialchars($data['nama']);
     $foto = htmlspecialchars($data['foto']);
     $porsi = htmlspecialchars($data['porsi']);
-    $bahan = htmlspecialchars($data['bahan']);
-    $caramasak = htmlspecialchars($data['caramasak']);
+    $bahan = $data['bahan'];
+    $caramasak = $data['caramasak'];
 
     $query = "INSERT INTO
                     foods
@@ -59,8 +59,8 @@ function ubah($data)
     $nama = htmlspecialchars($data['nama']);
     $foto = htmlspecialchars($data['foto']);
     $porsi = htmlspecialchars($data['porsi']);
-    $bahan = htmlspecialchars($data['bahan']);
-    $caramasak = htmlspecialchars($data['caramasak']);
+    $bahan = $data['bahan'];
+    $caramasak = $data['caramasak'];
 
     $queryubah = "UPDATE foods
                 SET

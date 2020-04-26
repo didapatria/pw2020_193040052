@@ -38,9 +38,22 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
     <link href="../css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bgcolor">
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><span class="title">iFood</span></a>
+            </div>
+        </nav>
+    </header>
+
     <div class="col s12 m7">
-        <h2 class="header">Detail</h2>
+        <div class="row">
+            <div class="col">
+                <h2 class="header white-text">Detail</h2>
+            </div>
+        </div>
         <div class="card horizontal">
             <div class="card-image">
                 <img src="../assets/img/<?= $foods['foto'] ?>">
@@ -48,13 +61,14 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
             <div class="card-stacked">
                 <div class="card-content">
                     <h3><?= $foods['nama'] ?></h3>
-                    <p>I am a very simple card. I am good at containing small bits of information.</p>
                     <p>Porsi : <?= $foods['porsi'] ?></p>
                     <p>Bahan : <?= $foods['bahan'] ?></p>
                     <p>Cara Masak : <?= $foods['caramasak'] ?></p>
                 </div>
                 <div class="card-action">
-                    <a href="../index.php" class="waves-effect waves-light btn-small">Kembali</a>
+                    <a href="../index.php" class="btn btn-small waves-effect waves-light" type="submit" name="ubah">
+                        Kembali
+                    </a>
                 </div>
             </div>
         </div>
@@ -63,6 +77,9 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
     <!--JavaScript at end of body for optimized loading-->
     <script src="../js/jquery.min.js"></script>
     <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+    <!--Custom Js-->
+    <script type="text/javascript" src="../js/main.js"></script>
 </body>
 
 </html>
