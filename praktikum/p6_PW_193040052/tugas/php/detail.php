@@ -52,7 +52,7 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
         <div class="col s12 m7">
             <div class="row">
                 <div class="col">
-                    <h2 class="header white-text">Detail</h2>
+                    <h2 class="header">Detail</h2>
                 </div>
             </div>
             <div class="card horizontal">
