@@ -204,8 +204,8 @@ textarea.materialize-textarea {
 }
 
 /* 2.8 Body */
-body.bgcolor {
-  background: #bb0e0e;
+body {
+  background: #fafeff;
 }
 
 /* 2.9 Container */

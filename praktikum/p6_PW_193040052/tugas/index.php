@@ -36,7 +36,7 @@ if (isset($_GET['keyword'])) {
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="bgcolor">
+<body>
   <!-- Header -->
   <header>
     <nav>
@@ -62,45 +62,47 @@ if (isset($_GET['keyword'])) {
     </nav>
   </header>
 
-  <div class="container container-color">
-    <main>
-      <div class="row">
-        <?php if (empty($foods)) : ?>
-          <tr>
-            <td colspan="10">
-              <h1>Data Tidak Ditemukan</h1>
-            </td>
-          </tr>
-        <?php else : ?>
-          <div class="col s12">
-            <div class="row">
-              <?php foreach ($foods as $food) : ?>
-                <div class="col s4">
-                  <div class="card">
-                    <div class="card-image">
-                      <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
-                    </div>
-                    <div class="card-content">
-                      <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?></span>
-                    </div>
-                    <div class="card-action">
-                      <a href="php/detail.php?id=<?= $food['id'] ?>">Detail</a>
+  <div class="container">
+    <div class="card-panel" style="margin-top: 15px;">
+      <main>
+        <div class="row">
+          <?php if (empty($foods)) : ?>
+            <tr>
+              <td colspan="10">
+                <h1>Data Tidak Ditemukan</h1>
+              </td>
+            </tr>
+          <?php else : ?>
+            <div class="col s12">
+              <div class="row">
+                <?php foreach ($foods as $food) : ?>
+                  <div class="col s4">
+                    <div class="card medium">
+                      <div class="card-image">
+                        <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?></span>
+                      </div>
+                      <div class="card-action">
+                        <a href="php/detail.php?id=<?= $food['id'] ?>">Detail</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-              <?php endforeach ?>
+                <?php endforeach ?>
+              </div>
+            </div>
+          <?php endif; ?>
+        </div>
+        <?php if (isset($_GET['keyword'])) : ?>
+          <div class="row">
+            <div class="col">
+              <a href="index.php" class="btn btn-small waves-effect waves-light">Refresh</a>
             </div>
           </div>
         <?php endif; ?>
-      </div>
-      <?php if (isset($_GET['keyword'])) : ?>
-        <div class="row">
-          <div class="col">
-            <a href="index.php" class="btn btn-small waves-effect waves-light">Refresh</a>
-          </div>
-        </div>
-      <?php endif; ?>
-    </main>
+      </main>
+    </div>
   </div>
 
   <!--JavaScript at end of body for optimized loading-->

@@ -38,7 +38,7 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
     <link href="../css/style.css" rel="stylesheet">
 </head>
 
-<body class="bgcolor">
+<body>
     <!-- Header -->
     <header>
         <nav>
@@ -48,27 +48,29 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
         </nav>
     </header>
 
-    <div class="col s12 m7">
-        <div class="row">
-            <div class="col">
-                <h2 class="header white-text">Detail</h2>
-            </div>
-        </div>
-        <div class="card horizontal">
-            <div class="card-image">
-                <img src="../assets/img/<?= $foods['foto'] ?>">
-            </div>
-            <div class="card-stacked">
-                <div class="card-content">
-                    <h3><?= $foods['nama'] ?></h3>
-                    <p>Porsi : <?= $foods['porsi'] ?></p>
-                    <p>Bahan : <?= $foods['bahan'] ?></p>
-                    <p>Cara Masak : <?= $foods['caramasak'] ?></p>
+    <div class="container">
+        <div class="col s12 m7">
+            <div class="row">
+                <div class="col">
+                    <h2 class="header white-text">Detail</h2>
                 </div>
-                <div class="card-action">
-                    <a href="../index.php" class="btn btn-small waves-effect waves-light" type="submit" name="ubah">
-                        Kembali
-                    </a>
+            </div>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="../assets/img/<?= $foods['foto'] ?>">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h3><?= $foods['nama'] ?></h3>
+                        <p>Porsi : <?= $foods['porsi'] ?></p>
+                        <p>Bahan : <?= $foods['bahan'] ?></p>
+                        <p>Cara Masak : <?= $foods['caramasak'] ?></p>
+                    </div>
+                    <div class="card-action">
+                        <a href="../index.php" class="btn btn-small waves-effect waves-light" type="submit" name="ubah">
+                            Kembali
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

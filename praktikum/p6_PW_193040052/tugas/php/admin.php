@@ -70,8 +70,8 @@ if (isset($_GET['keyword'])) {
     <li>
       <div class="divider mt-0"></div>
     </li>
-    <li><a class="waves-effect" href="admin.php">Welcome</a></li>
-    <li class="active"><a class="waves-effect" href="data_masakan.php">Data Masakan</a></li class="active">
+    <li class="active"><a class="waves-effect" href="admin,php">Welcome</a></li class="active">
+    <li><a class="waves-effect" href="data_masakan.php">Data Masakan</a></li class="active">
     <li><a class="waves-effect" href="#!">Config</a></li>
     <li>
       <div class="divider mt-0"></div>
