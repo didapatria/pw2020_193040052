@@ -1,6 +1,13 @@
 <?php
 require 'functions.php';
 
+// jika tida ada id di url
+if (!isset($_GET['id'])) {
+  header("Location: index.php");
+  exit;
+}
+
+//ambil id dari url
 $id = $_GET['id'];
 $food = query("SELECT * FROM foods WHERE id = $id")[0];
 
@@ -9,12 +16,12 @@ if (isset($_POST['ubah'])) {
   if (ubah($_POST) > 0) {
     echo "<script>
             alert('Data Berhasil Diubah!');
-            document.location.href = 'admin.php';
+            document.location.href = 'data_masakan.php';
           </script>";
   } else {
     echo "<script>
             alert('Data Gagal Diubah!');
-            document.location.href = 'admin.php';
+            document.location.href = 'data_masakan.php';
           </script>";
   }
 }

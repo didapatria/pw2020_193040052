@@ -47,7 +47,7 @@ if (isset($_GET['keyword'])) {
             <form>
               <div class="input-search">
                 <i class="material-icons prefix">search</i>
-                <input id="cari" name="keyword" type="text" class="validate" placeholder="cari masakan">
+                <input id="cari" name="keyword" type="text" class="validate" placeholder="cari masakan" autocomplete="off">
               </div>
             </form>
           </li>

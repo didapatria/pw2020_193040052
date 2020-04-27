@@ -38,15 +38,14 @@ function tambah($data)
                 VALUES
                 (null, '$nama', '$foto', '$porsi', '$bahan', '$caramasak');
             ";
-    mysqli_query($conn, $query);
-    echo mysqli_error($conn);
+    mysqli_query($conn, $query) or die(mysqli_error($conn));
     return mysqli_affected_rows($conn);
 }
 
 function hapus($id)
 {
     $conn = koneksi();
-    mysqli_query($conn, "DELETE FROM foods WHERE id = $id");
+    mysqli_query($conn, "DELETE FROM foods WHERE id = $id") or die(mysqli_error($conn));
 
     return mysqli_affected_rows($conn);
 }
@@ -70,7 +69,6 @@ function ubah($data)
                 bahan = '$bahan',
                 caramasak = '$caramasak'
             WHERE id = '$id' ";
-    mysqli_query($conn, $queryubah);
-    echo mysqli_error($conn);
+    mysqli_query($conn, $queryubah) or die(mysqli_error($conn));
     return mysqli_affected_rows($conn);
 }

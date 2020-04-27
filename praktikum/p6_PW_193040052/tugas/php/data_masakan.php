@@ -47,7 +47,7 @@ if (isset($_GET['keyword'])) {
             <form>
               <div class="input-search">
                 <i class="material-icons prefix">search</i>
-                <input id="cari" name="keyword" type="text" class="validate" placeholder="cari masakan">
+                <input id="cari" name="keyword" type="text" class="validate" placeholder="cari masakan" autocomplete="off">
               </div>
             </form>
           </li>
@@ -152,7 +152,7 @@ if (isset($_GET['keyword'])) {
                             Ubah
                           </a>
                           &nbsp;
-                          <a href="hapus.php?id=<?= $food['id'] ?>" onclick="return confirm('Hapus Data')" class="btn btn-small waves-effect waves-light" type="submit" name="hapus">
+                          <a href="hapus.php?id=<?= $food['id'] ?>" onclick="return confirm('Apakah Anda Yakin Hapus Data?')" class="btn btn-small waves-effect waves-light" type="submit" name="hapus">
                             <i class="material-icons left">delete</i>
                             Hapus
                           </a>
