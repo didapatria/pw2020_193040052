@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2020 at 08:02 AM
+-- Generation Time: Apr 27, 2020 at 10:28 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -105,7 +105,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'admin');
+(1, 'admin', 'admin'),
+(2, 'didapatria', '$2y$10$0RdTNPWpSnzRQ0EfsZZFReC90FFGEk4AlackBpqiH4Wdg9mZLQSgm');
 
 --
 -- Indexes for dumped tables
@@ -149,7 +150,7 @@ ALTER TABLE `makanan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
