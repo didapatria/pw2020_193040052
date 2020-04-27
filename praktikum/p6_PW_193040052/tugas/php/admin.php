@@ -1,19 +1,3 @@
-<?php
-// menghubungkan dengan file php lainnya
-require 'functions.php';
-
-if (isset($_GET['keyword'])) {
-  $keyword = $_GET['keyword'];
-  $foods = query("SELECT * FROM foods WHERE
-                    nama LIKE '%$keyword%' OR
-                    porsi LIKE '%$keyword%' OR
-                    bahan LIKE '%$keyword%' OR
-                    caramasak LIKE '%$keyword%' ");
-} else {
-  $foods = query("SELECT * FROM foods");
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
