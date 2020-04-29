@@ -9,6 +9,9 @@
   CSS Utilities
   1.1 Padding
   1.2 Margin
+  1.3 Width & Height
+  1.4 Color
+  1.5 Display (inline, block, inline-block, none)
 
   Info Penamaan :
   ---------------------------------
@@ -50,6 +53,9 @@
     }
 
 /* 1.2 Margin */
+.m-auto {
+  margin: auto;
+}
 .ma-0 {
   margin: 0 !important;
 }
@@ -75,6 +81,45 @@
       margin-bottom: 0 !important;
     }
 
+/* 1.3 Width & Height */
+.vh100 {
+  height: 100vh;
+}
+.min-vh100 {
+  min-height: 100vh;
+}
+.w100 {
+  width: 100%;
+}
+
+/* 1.4 Color */
+.bg-primary {
+  background: #bb0e0e;
+}
+.color-primary {
+  color: #bb0e0e;
+}
+.bg-secondary {
+  background: #8c0e0e;
+}
+.color-secondary {
+  color: #8c0e0e;
+}
+
+/* 1.5 Display */
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+
 /*
   CUSTOM MATERIALIZE
   2.1 Header
@@ -87,7 +132,9 @@
   2.8 Body
   2.9 Container
   2.10 Card
+  2.11 Login
 */
+
 header.open, 
 footer.open {
   padding-left: 300px;
@@ -219,6 +266,12 @@ body {
   height: 200px;
   object-fit: cover;
   object-position: center center;
+}
+
+/* 2.11 Login */
+.form-login {
+  min-width: 400px;
+  max-width: 95%;
 }
 
 /* Responsive */

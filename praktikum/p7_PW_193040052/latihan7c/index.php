@@ -76,8 +76,8 @@ if (isset($_GET['keyword'])) {
             <div class="col s12">
               <div class="row">
                 <?php foreach ($foods as $food) : ?>
-                  <div class="col s4">
-                    <div class="card medium">
+                  <div class="col s3">
+                    <div class="card small">
                       <div class="card-image">
                         <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
                       </div>
