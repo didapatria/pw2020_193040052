@@ -104,7 +104,7 @@ if (isset($_POST['submit'])) {
                       <i class="material-icons left">check</i>
                       Submit
                     </button>
-                    <a href="../index.php" class="btn waves-effect waves-light red" type="submit" name="action">
+                    <a href="../index.php" class="btn waves-effect waves-light red" type="submit" name="cancel">
                       <i class="material-icons left">cancel</i>
                       Cancel
                     </a>

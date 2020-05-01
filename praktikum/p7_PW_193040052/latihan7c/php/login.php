@@ -6,22 +6,22 @@ if (isset($_SESSION['username'])) {
   header("Location: admin.php");
   exit;
 }
-// // cek cookie
-// if (isset($_COOKIE['username']) && isset($_COOKIE['hash'])) {
-//   $username = $_COOKIE['username'];
-//   $hash = $_COOKIE['hash'];
+// cek cookie
+if (isset($_COOKIE['username']) && isset($_COOKIE['hash'])) {
+  $username = $_COOKIE['username'];
+  $hash = $_COOKIE['hash'];
 
-//   // ambil username berdasarkan id
-//   $result = mysqli_query(koneksi(), "SELECT * FROM user WHERE username = '$username'");
-//   $row = mysqli_fetch_assoc($result);
+  // ambil username berdasarkan id
+  $result = mysqli_query(koneksi(), "SELECT * FROM user WHERE username = '$username'");
+  $row = mysqli_fetch_assoc($result);
 
-//   // cek cookie dan username
-//   if ($hash === hash('sha256', $row['id'], false)) {
-//     $_SESSION['username'] = $row['username'];
-//     header("Location: admin.php");
-//     exit;
-//   }
-// }
+  // cek cookie dan username
+  if ($hash === hash('sha256', $row['id'], false)) {
+    $_SESSION['username'] = $row['username'];
+    header("Location: admin.php");
+    exit;
+  }
+}
 // Login
 if (isset($_POST['submit'])) {
   $username = $_POST['username'];
@@ -33,12 +33,12 @@ if (isset($_POST['submit'])) {
     if (password_verify($password, $row['password'])) {
       $_SESSION['username'] = $_POST['username'];
       $_SESSION['hash'] = hash('sha256', $row['id'], false);
-      // // jika remember me dicentang
-      // if (isset($_POST['remember'])) {
-      //   setcookie('username', $row['username'], time() + 60 * 60 * 24);
-      //   $hash = hash('sha256', $row['id']);
-      //   setcookie('hash', $hash, time() + 60 * 60 * 24);
-      // }
+      // jika remember me dicentang
+      if (isset($_POST['remember'])) {
+        setcookie('username', $row['username'], time() + 60 * 60 * 24);
+        $hash = hash('sha256', $row['id']);
+        setcookie('hash', $hash, time() + 60 * 60 * 24);
+      }
 
       if (hash('sha256', $row['id']) == $_SESSION['hasil']) {
         header("Location: admin.php");
@@ -125,7 +125,7 @@ if (isset($_POST['submit'])) {
                       <i class="material-icons left">check</i>
                       Submit
                     </button>
-                    <a href="../index.php" class="btn waves-effect waves-light red" type="submit" name="action">
+                    <a href="../index.php" class="btn waves-effect waves-light red" type="submit" name="cancel">
                       <i class="material-icons left">cancel</i>
                       Cancel
                     </a>
