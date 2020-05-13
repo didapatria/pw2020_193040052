@@ -1,0 +1,88 @@
+/*
+  Created by: Dida Patria
+  Daftar Isi:
+  - CSS Utilities (untuk memudahkan mengcustom class secara global)
+  - Custom Materialize
+*/
+
+/*
+  CSS Utilities
+  1.1 Padding
+  1.2 Margin
+  1.3 Width & Height
+
+  Info Penamaan :
+  ---------------------------------
+  *a = .. + all
+  ---------------------------------
+  *l = .. + left
+  *r = .. + right
+  *x = .. + sumbu x (left + right)
+  ---------------------------------
+  *t = .. + top
+  *b = .. + bottom
+  *y = .. + sumbu y (top + bottom)
+  --------------------------------- 
+*/
+/* 1.1 Padding */
+.pa-0 {
+  padding: 0 !important;
+}
+
+/* 1.2 Margin */
+.m-auto {
+  margin: auto;
+}
+.ma-0 {
+  margin: 0 !important;
+}
+
+/* 1.3 Width & Height */
+.vh100 {
+  height: 100vh;
+}
+
+/*
+  CUSTOM MATERIALIZE
+  2.1 Button
+  2.2 Main
+  2.3 Body
+  2.4 Login
+*/
+
+/* 2.1 Button */
+.btn {
+  border-radius: 20px;
+}
+.file-field .btn, 
+.file-field .btn-large, 
+.file-field .btn-small {
+  border-radius: 2px;
+}
+
+/* 2.2 Main */
+main {
+  padding: 10px 25px;
+}
+main.open {
+  padding-left: 325px;
+}
+
+/* 2.3 Body */
+body {
+  background: #fafeff;
+}
+
+/* 2.4 Login */
+.form-login {
+  min-width: 400px;
+  max-width: 95%;
+}
+
+/* Responsive */
+@media only screen and (max-width : 992px) {
+  main {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+}
