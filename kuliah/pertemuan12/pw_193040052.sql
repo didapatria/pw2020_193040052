@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2020 at 06:55 AM
+-- Generation Time: May 19, 2020 at 08:55 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -53,6 +52,26 @@ INSERT INTO `mahasiswa` (`id`, `nama`, `nrp`, `email`, `jurusan`, `gambar`) VALU
 (9, 'Fauzan Nursalma', '193040053', 'fauzann@gmail.com', 'Teknik Informatika', 'g9.png'),
 (10, 'Rifky Gema Fauzi', '193040062', 'rifkigema@gmail.com', 'Teknik Informatika', 'g10.png');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'admin', '$2y$10$YR3x4Uoh4NPba.KzULwp3.EeYHQn0NmVxAmTq4A6x8rVOJx9JJN3a'),
+(2, 'didapatria', '$2y$10$Kh.nTlTluhwuoGhhz6JeAOHx6ZrtZ0N7J44s.wZ5QnIXszxME3pWa');
+
 --
 -- Indexes for dumped tables
 --
@@ -64,6 +83,12 @@ ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -72,6 +97,12 @@ ALTER TABLE `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

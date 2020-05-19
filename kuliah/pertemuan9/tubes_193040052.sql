@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2020 at 10:28 AM
+-- Generation Time: May 19, 2020 at 08:52 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -105,8 +104,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'admin'),
-(2, 'didapatria', '$2y$10$0RdTNPWpSnzRQ0EfsZZFReC90FFGEk4AlackBpqiH4Wdg9mZLQSgm');
+(2, 'didapatria', '$2y$10$0RdTNPWpSnzRQ0EfsZZFReC90FFGEk4AlackBpqiH4Wdg9mZLQSgm'),
+(3, 'admin', '$2y$10$L2GMJyawpUmVqRrnnYSad.HByvfRp4BOAthQ3iIuEB3LkgeG9KwGm');
 
 --
 -- Indexes for dumped tables
@@ -150,7 +149,7 @@ ALTER TABLE `makanan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

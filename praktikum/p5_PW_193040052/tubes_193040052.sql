@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2020 at 10:28 AM
+-- Generation Time: May 19, 2020 at 09:15 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -96,8 +95,8 @@ INSERT INTO `makanan` (`id`, `gambar`, `nama_makanan`, `terbuat`, `tempat`, `har
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `username` varchar(64) NOT NULL,
-  `password` varchar(256) NOT NULL
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -105,8 +104,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'admin'),
-(2, 'didapatria', '$2y$10$0RdTNPWpSnzRQ0EfsZZFReC90FFGEk4AlackBpqiH4Wdg9mZLQSgm');
+(1, 'admin', '$2y$10$rEf.N8fQmxwknBq0kbaE9e7gLnYUTNWD4i4FX2TszLNvnK00f.QuS'),
+(2, 'didapatria', '$2y$10$528YSU.4MGv.k3eARuUJ6OgCj9FJYHJv8nVRnmFk2iAVirhxzKaW.');
 
 --
 -- Indexes for dumped tables

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2020 at 03:16 PM
+-- Generation Time: May 19, 2020 at 09:15 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- PHP Version: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -88,6 +87,26 @@ INSERT INTO `makanan` (`id`, `gambar`, `nama_makanan`, `terbuat`, `tempat`, `har
 (9, '9.jpg', 'Ice Campur', 'Buah-buahan', 'Bandung', 8000),
 (10, '10.jpg', 'Lontong', 'Beras', 'Setia Budhi', 10000);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `password`) VALUES
+(1, 'admin', '$2y$10$rEf.N8fQmxwknBq0kbaE9e7gLnYUTNWD4i4FX2TszLNvnK00f.QuS'),
+(2, 'didapatria', '$2y$10$528YSU.4MGv.k3eARuUJ6OgCj9FJYHJv8nVRnmFk2iAVirhxzKaW.');
+
 --
 -- Indexes for dumped tables
 --
@@ -105,6 +124,12 @@ ALTER TABLE `makanan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -119,6 +144,12 @@ ALTER TABLE `foods`
 --
 ALTER TABLE `makanan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

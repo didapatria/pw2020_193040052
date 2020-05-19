@@ -1,0 +1,473 @@
+/*
+  Created by: Dida Patria
+  Daftar Isi:
+  - CSS Utilities (untuk memudahkan mengcustom class secara global)
+  - Custom Materialize
+  - Homepage (Frontend)
+*/
+
+/*
+  CSS Utilities
+  1.1 Padding
+  1.2 Margin
+  1.3 Width & Height
+  1.4 Color
+  1.5 Display (inline, block, inline-block, none)
+
+  Info Penamaan :
+  ---------------------------------
+  *a = .. + all
+  ---------------------------------
+  *l = .. + left
+  *r = .. + right
+  *x = .. + sumbu x (left + right)
+  ---------------------------------
+  *t = .. + top
+  *b = .. + bottom
+  *y = .. + sumbu y (top + bottom)
+  --------------------------------- 
+*/
+/* 1.1 Padding */
+.pa-0 {
+  padding: 0 !important;
+}
+  .px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+    .pl-0 {
+      padding-left: 0 !important;
+    }
+    .pr-0 {
+      padding-right: 0 !important;
+    }
+
+  .py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+    .pt-0 {
+      padding-top: 0 !important;
+    }
+    .pb-0 {
+      padding-bottom: 0 !important;
+    }
+
+/* 1.2 Margin */
+.m-auto {
+  margin: auto;
+}
+.ma-0 {
+  margin: 0 !important;
+}
+  .mx-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+    .ml-0 {
+      margin-left: 0 !important;
+    }
+    .mr-0 {
+      margin-right: 0 !important;
+    }
+
+  .my-0 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+    .mb-0 {
+      margin-bottom: 0 !important;
+    }
+    .mt-0 {
+      margin-top: 0 !important;
+    }
+.ma-10 {
+  margin: 10px !important;
+}
+  .mx-10 {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  } 
+    .ml-10 {
+      margin-left: 10px !important;
+    }  
+    .mr-10 {
+      margin-right: 10px !important;
+    }
+  .my-10 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }    
+    .mt-10 {
+      margin-top: 10px !important;
+    }  
+    .mb-10 {
+      margin-bottom: 10px !important;
+    }  
+    .mt-15 {
+      margin-top: 15px !important;
+    }  
+    .mb-15 {
+      margin-bottom: 15px !important;
+    }
+.mt-272 {
+  margin-top: -272px !important;
+}
+
+/* 1.3 Width & Height */
+.vh100 {
+  height: 100vh;
+}
+.min-vh100 {
+  min-height: 100vh;
+}
+.w100 {
+  width: 100%;
+}
+
+/* 1.4 Color */
+.bg-primary {
+  background: #bb0e0e;
+}
+.color-primary {
+  color: #bb0e0e;
+}
+.bg-secondary {
+  background: #8c0e0e;
+}
+.color-secondary {
+  color: #8c0e0e;
+}
+
+/* 1.5 Display */
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-block {
+  display: block;
+}
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+
+/*
+  CUSTOM MATERIALIZE
+  2.1 Header
+  2.2 Sidenav
+  2.3 Breadcrumb
+  2.4 Button
+  2.5 Main
+  2.6 Textarea
+  2.7 Search
+  2.8 Body
+  2.9 Container
+  2.10 Card
+  2.11 Login
+  2.12 Detail
+*/
+
+header.open, 
+footer.open {
+  padding-left: 300px;
+}
+
+/* 2.1 Header */
+header.open .title {
+  display: none;
+}
+header .brand-logo {
+  padding: 0 15px;
+}
+header .dropdown-content {
+  top: 50px !important;
+}
+header nav {
+  background: #8c0e0e;
+}
+/* 2.2 Sidenav */
+.sidenav.close {
+  -webkit-transform: translateX(-100%) !important;
+  transform: translateX(-100%) !important;
+}
+.sidenav {
+  background: #bb0e0e;
+  color: #ffffff;
+}
+.sidenav li>a {
+  color: #ffffff;
+}
+.sidenav li.active,
+.sidenav li>a:hover {
+  background: #8c0e0e;
+}
+  .sidenav-burger {
+    display: none;
+    position: absolute;
+    right: 15px;
+    color: #fff;
+  }
+  .sidenav-burger i {
+    font-size: 32px;
+  }
+
+/* 2.3 Breadcrumb */
+.breadcrumb-area {
+  margin: 2.3733333333rem 0 1.424rem 0;
+}
+.color-grey .breadcrumb,
+.color-grey .breadcrumb:before {
+  color: #c6c6c6;
+  margin: 0;
+}
+.color-grey .breadcrumb:before {
+  font-size: unset;
+}
+.color-grey .breadcrumb:last-child {
+  color: #333333;
+}
+
+/* 2.4 Button */
+.btn {
+  border-radius: 20px;
+}
+.file-field .btn, 
+.file-field .btn-large, 
+.file-field .btn-small {
+  border-radius: 2px;
+}
+
+/* 2.5 Main */
+main {
+  padding: 10px 25px;
+}
+main.open {
+  padding-left: 325px;
+}
+
+/* 2.6 Textarea */
+textarea.materialize-textarea {
+  height: 90px !important;
+}
+
+/* 2.7 Search */
+.input-search {
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px 15px;
+  color: #000;
+  position: relative;
+  height: 36px;
+  margin: 15px 0;
+}
+.input-search i.prefix {
+  position: absolute;
+  height: 26px;
+  line-height: 26px;
+}
+.input-search input {
+  border: none !important;
+  margin: 0 !important;
+  height: 26px !important;
+  width: auto !important;
+  display: block;
+  padding-left: 25px !important;
+}
+.input-search input:valid,
+.input-search input:focus,
+.input-search input:active
+{
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+/* 2.8 Body */
+body {
+  background: #fafeff;
+}
+
+/* 2.9 Container */
+.container-color {
+  background: #ffffff;
+}
+
+/* 2.10 Card */
+.img-cover {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* 2.11 Login */
+.form-login {
+  min-width: 400px;
+  max-width: 95%;
+}
+
+#signup {
+  color: #2dbd6e;
+}
+
+/* 2.12 Detail */
+.bg-detail {
+  background: url('../assets/img/bg_welcome.jpg');
+  background-size: cover;
+}
+
+/* 2.13 Font */
+#font-caveat {
+  font-family: 'Caveat', cursive;
+}
+#font-PermanentMarker {
+  font-family: 'Permanent Marker', cursive;
+}
+
+/* Responsive */
+@media only screen and (max-width : 992px) {
+  header, footer {
+    padding-left: 0 !important;
+  }
+  main {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+  header.open .title {
+    display: inline-block;
+  }
+  .sidenav {
+    width: 100%;
+  }
+  .sidenav.close {
+    -webkit-transform: translateX(0) !important;
+    transform: translateX(0) !important;
+  }
+  .sidenav-burger {
+    display: block;
+  }
+
+  .breadcrumb-area {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  .breadcrumb {
+    font-size: 12px;
+  }
+}
+
+/*
+  HOMEPAGE
+  3.1 Hero Images
+  3.2 Food List
+*/
+.hero {
+  width: 100%;
+  height: 400px;
+  background: url('../assets/img/bg_welcome.jpg');
+  background-size: cover;
+}
+.hero.list {
+  height: 230px;
+}
+.hero .hero-header {
+  padding: 1rem .75rem;
+}
+.hero-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.hero-logo .logo-title {
+  margin-left: 7px;
+}
+.logo-title {
+  font-size: 24px;
+  color: #333;
+}
+.logo-title::first-letter {
+  color: #8c0e0e;
+}
+.hero-logo .logo-title2 {
+  margin-left: 7px;
+}
+.logo-title2 {
+  font-size: 24px;
+  color: #fff;
+}
+.logo-title2::first-letter {
+  color: #333;
+}
+.hero-logo img {
+  max-height: 40px;
+}
+.hero nav {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  color: #333;
+  height: 40px;
+  line-height: 40px;
+}
+.hero nav ul a {
+  color: #333;
+  font-weight: 500;
+}
+.hero nav ul a.btn {
+  color: #fff;
+}
+.hero nav ul a:hover {
+  background-color: transparent;
+  color: #26a69a;
+}
+.hero nav ul a:last-child{
+  margin-right: 0;
+}
+/* 3.1.2 Food Search*/
+.form-search {
+  padding-top: 10px;
+}
+.form-search .input-search {
+  border-radius: 20px 0 0 20px;
+  margin: 0;
+}
+.form-search  .btn-search {
+  border-radius: 0 20px 20px 0;
+  height: 36px;
+}
+
+/* 3.2 Food list */
+.food-list.latest {
+  margin-top: -50px;
+  background: transparent;
+}
+.food-list.clear {
+  background: transparent;
+}
+.food-list {
+  background: #f7f7f7;
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.food-list .row {
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 15px;
+  color: #fff;
+  background-color: #8c0e0e;
+}
+
+.contact-footer {
+  background: #bb0e0e;
+}
