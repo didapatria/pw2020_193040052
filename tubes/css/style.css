@@ -365,6 +365,11 @@ form .input-field>label,
 form label  {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 }
+th.col,
+td.col {
+  float: none !important;
+}
+
 .material-icons {
   font-family: 'Material Icons' !important;
 }

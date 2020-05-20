@@ -69,9 +69,15 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
         <div class="card-stacked">
           <div class="card-content">
             <h3><?= $foods['nama'] ?></h3>
-            <p>Porsi : <?= $foods['porsi'] ?></p>
-            <p>Bahan : <?= $foods['bahan'] ?></p>
-            <p>Cara Masak : <?= $foods['caramasak'] ?></p>
+            <div class="row">
+              <div class="col l6 s12">
+                <p><b class="font20">Porsi : <span class="font24"><?= $foods['porsi'] ?></span></b></p>
+                <p><b class="font20">Bahan : </b><?= $foods['bahan'] ?></p>
+              </div>
+              <div class="col l6 s12">
+                <p><b class="font20">Cara Masak : </b><?= $foods['caramasak'] ?></p>
+              </div>
+            </div>
           </div>
           <div class="card-action">
             <a href="../index.php" class="btn btn-small waves-effect waves-light white-text" type="submit" name="ubah">

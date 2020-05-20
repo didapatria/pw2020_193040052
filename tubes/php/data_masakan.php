@@ -114,14 +114,14 @@ if (isset($_POST['keyword'])) {
             <div class="card-panel">
               <table class="striped">
                 <thead>
-                  <tr>
+                  <tr class="row">
                     <th>No</th>
                     <th>Foto</th>
                     <th>Nama Masakan</th>
                     <th>Porsi</th>
-                    <th>Bahan Masakan</th>
-                    <th>Cara Memasak</th>
-                    <th>Action</th>
+                    <th class="col l4 s12">Bahan Masakan</th>
+                    <th class="col l5 s12">Cara Memasak</th>
+                    <th class="col l3 s12">Action</th>
                   </tr>
                 </thead>
 
@@ -135,18 +135,18 @@ if (isset($_POST['keyword'])) {
                   <?php else : ?>
                     <?php $i = 1 ?>
                     <?php foreach ($foods as $food) : ?>
-                      <tr>
+                      <tr class="row">
                         <td><?= $i ?></td>
                         <td><img class="img-cover" src="../assets/img/galeri/<?= $food['foto'] ?>" alt=""></td>
                         <td><?= $food['nama'] ?></td>
                         <td><?= $food['porsi'] ?></td>
-                        <td>
+                        <td class="col l4 s12">
                           <div class="food-content"><?= $food['bahan'] ?></div>
                         </td>
-                        <td>
+                        <td class="col l5 s12">
                           <div class="food-content"><?= $food['caramasak'] ?></div>
                         </td>
-                        <td>
+                        <td class="col l3 s12">
                           <a href="ubah.php?id=<?= $food['id'] ?>" class="btn btn-small waves-effect waves-light" type="submit" name="ubah">
                             <i class="material-icons left">edit</i>
                             Ubah
