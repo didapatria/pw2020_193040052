@@ -30,7 +30,7 @@ $no = $mulai + 1;
   <meta name="author" content="Dida Patria">
 
   <link rel="icon" type="image/png" href="../assets/img/logo.png">
-  <title>iFood</title>
+  <title>iFood - Daftar Resep</title>
 
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -59,9 +59,9 @@ $no = $mulai + 1;
                 Beranda
               </a>
             </li>
-            <li>
+            <li class="active">
               <a href="list.php">
-                Daftar Masakan
+                Daftar Resep
               </a>
             </li>
             <li>
@@ -77,8 +77,8 @@ $no = $mulai + 1;
     <div class="container">
       <div class="row">
         <div class="col s8">
-          <h1 class="ma-0 mt-10" id="font-PermanentMarker">Daftar Resep</h1>
-          <p>
+          <h1 class="ma-0 mt-10 font-PermanentMarker">Daftar Resep</h1>
+          <p class="font24">
             Masukan kata kunci dan mulai lakukan pencarian resep masakan
           </p>
         </div>
@@ -112,7 +112,7 @@ $no = $mulai + 1;
                     <div class="col s3">
                       <div class="card small">
                         <div class="card-image">
-                          <img class="activator img-cover" src="../assets/img/<?= $food['foto'] ?>">
+                          <img class="activator img-cover" src="../assets/img/galeri/<?= $food['foto'] ?>">
                         </div>
                         <div class="card-content">
                           <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?></span>
@@ -159,10 +159,10 @@ $no = $mulai + 1;
   </section>
 
   <!-- Footer -->
-  <footer class="contact-footer">
+  <footer class="contact-footer font18">
     <div class="container">
       <div class="row">
-        <div class="col l4 s12">
+        <div class="col l5 s12">
           <h5 class="white-text">
             <a href="index.php" class="brand-logo">
               <div class="hero-logo">
@@ -178,18 +178,18 @@ $no = $mulai + 1;
             Adinda Fadhil Patria
           </p>
         </div>
-        <div class="col l4 offset-l1 s12">
+        <div class="col l3 offset-l1 s12">
           <h5 class="white-text">Contact</h5>
           <ul>
             <div class="row">
-              <div class="col mb-10">
-                <li><i class="material-icons left">location_on</i>CO3 Residence (Panorama) Jl. Kapt. Abdul Hamid No. 86, Bandung, West Java, Indonesia.</li>
-              </div>
               <div class="col mb-10">
                 <li><i class="material-icons left">phone</i>Phone: (+62)819 1260 1216</li>
               </div>
               <div class="col mb-10">
                 <li><i class="material-icons left">email</i>Email: didapatria3@gmail.com</li>
+              </div>
+              <div class="col mb-10">
+                <li><i class="material-icons left">location_on</i>CO3 Residence (Panorama) Jl. Kapt. Abdul Hamid No. 86, Bandung, West Java, Indonesia.</li>
               </div>
             </div>
           </ul>
@@ -260,7 +260,7 @@ $no = $mulai + 1;
       </div>
     </div>
   </footer>
-  <footer>
+  <footer class="font20">
     <div class="footer-copyright">
       <div class="container center-align">
         &copy; 2020 - didapatria

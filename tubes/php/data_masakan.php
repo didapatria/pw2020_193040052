@@ -137,7 +137,7 @@ if (isset($_POST['keyword'])) {
                     <?php foreach ($foods as $food) : ?>
                       <tr>
                         <td><?= $i ?></td>
-                        <td><img class="img-cover" src="../assets/img/<?= $food['foto'] ?>" alt=""></td>
+                        <td><img class="img-cover" src="../assets/img/galeri/<?= $food['foto'] ?>" alt=""></td>
                         <td><?= $food['nama'] ?></td>
                         <td><?= $food['porsi'] ?></td>
                         <td>

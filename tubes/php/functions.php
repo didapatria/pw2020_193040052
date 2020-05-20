@@ -36,7 +36,7 @@ function upload()
     // echo "<script>
     //         alert('pilih foto terlebih dahulu!');
     //       </script>";
-    return 'jonathan-pielmayer-Gn64mz9hTqE-unsplash.jpg';
+    return 'default.jpg';
   }
 
   // cek ekstensi file
@@ -73,7 +73,7 @@ function upload()
   $nama_file_baru = uniqid();
   $nama_file_baru .= '.';
   $nama_file_baru .= $ekstensi_file;
-  move_uploaded_file($tmp_file, '../assets/img/' . $nama_file_baru);
+  move_uploaded_file($tmp_file, '../assets/img/galeri/' . $nama_file_baru);
 
   return $nama_file_baru;
 }
@@ -109,8 +109,8 @@ function hapus($id)
 
   // menghapus foto di folder img
   $foods = query("SELECT * FROM foods WHERE id = $id")[0];
-  if ($foods['foto'] != 'jonathan-pielmayer-Gn64mz9hTqE-unsplash.jpg') {
-    unlink('../assets/img/' . $foods['foto']);
+  if ($foods['foto'] != 'default.jpg') {
+    unlink('../assets/img/galeri/' . $foods['foto']);
   }
 
   mysqli_query($conn, "DELETE FROM foods WHERE id = $id") or die(mysqli_error($conn));
@@ -134,7 +134,7 @@ function ubah($data)
     return false;
   }
 
-  if ($foto == 'jonathan-pielmayer-Gn64mz9hTqE-unsplash.jpg') {
+  if ($foto == 'default.jpg') {
     $foto = $foto_lama;
   }
 

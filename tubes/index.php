@@ -1,8 +1,8 @@
 <?php
 // menghubungkan dengan file php lainnya
 require 'php/functions.php';
-$foods_populer = query("SELECT * FROM foods LIMIT 4");
-$foods_lainnya = query("SELECT * FROM foods LIMIT 4,8");
+$foods_terbaru = query("SELECT * FROM foods ORDER BY id DESC LIMIT 4");
+$foods_lainnya = query("SELECT * FROM foods ORDER BY id DESC LIMIT 4,4");
 
 if (isset($_POST['keyword'])) {
   $foods = keyword($_POST['keyword']);
@@ -48,14 +48,14 @@ if (isset($_POST['keyword2'])) {
             </div>
           </a>
           <ul class="right hide-on-med-and-down">
-            <li>
+            <li class="active">
               <a href="index.php">
                 Beranda
               </a>
             </li>
             <li>
               <a href="php/list.php">
-                Daftar Masakan
+                Daftar Resep
               </a>
             </li>
             <li>
@@ -71,14 +71,13 @@ if (isset($_POST['keyword2'])) {
     <div class="container">
       <div class="row">
         <div class="col s6">
-          <h1 class="ma-0 mt-10" id="font-PermanentMarker">Temukan resep masakanmu!</h1>
-          <p>
-            Memasak sendiri masakanmu dari rumah dengan mudah dan praktis.
+          <h1 class="ma-0 mt-10 font-PermanentMarker">Temukan resep masakanmu!</h1>
+          <p class="font24">
             Nikmati pengalaman memasak pertama kamu dan berikan masakan yang terbaik
             untuk orang yang kamu sayangi
           </p>
           <form class="d-flex align-center form-search" method="POST">
-            <div class="input-search">
+            <div class="input-search border-right-0">
               <i class="material-icons prefix">search</i>
               <input id="cari" name="keyword" type="text" class="validate keyword" placeholder="cari resep masakan.." autocomplete="off">
             </div>
@@ -101,13 +100,13 @@ if (isset($_POST['keyword2'])) {
         <div class="row">
           <div class="col">
             <h4 class="mt-0">
-              Resep Populer
+              Resep Terbaru
             </h4>
           </div>
         </div>
         <div class="row">
           <div class="col s12">
-            <?php if (empty($foods_populer)) : ?>
+            <?php if (empty($foods_terbaru)) : ?>
               <div class="row">
                 <div class="col s7">
                   <h4 class="mt-0">
@@ -117,11 +116,11 @@ if (isset($_POST['keyword2'])) {
               </div>
             <?php else : ?>
               <div class="row">
-                <?php foreach ($foods_populer as $food) : ?>
+                <?php foreach ($foods_terbaru as $food) : ?>
                   <div class="col s3">
                     <div class="card small">
                       <div class="card-image">
-                        <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
+                        <img class="activator img-cover" src="assets/img/galeri/<?= $food['foto'] ?>">
                       </div>
                       <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?></span>
@@ -171,7 +170,7 @@ if (isset($_POST['keyword2'])) {
                   <div class="col s3">
                     <div class="card small">
                       <div class="card-image">
-                        <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
+                        <img class="activator img-cover" src="assets/img/galeri/<?= $food['foto'] ?>">
                       </div>
                       <div class="card-content">
                         <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?></span>
@@ -199,7 +198,7 @@ if (isset($_POST['keyword2'])) {
   </section>
 
   <!-- Footer -->
-  <footer class="contact-footer">
+  <footer class="contact-footer font18">
     <div class="container">
       <div class="row">
         <div class="col l5 s12">
@@ -223,13 +222,13 @@ if (isset($_POST['keyword2'])) {
           <ul>
             <div class="row">
               <div class="col mb-10">
-                <li><i class="material-icons left">location_on</i>CO3 Residence (Panorama) Jl. Kapt. Abdul Hamid No. 86, Bandung, West Java, Indonesia.</li>
-              </div>
-              <div class="col mb-10">
                 <li><i class="material-icons left">phone</i>Phone: (+62)819 1260 1216</li>
               </div>
               <div class="col mb-10">
                 <li><i class="material-icons left">email</i>Email: didapatria3@gmail.com</li>
+              </div>
+              <div class="col mb-10">
+                <li><i class="material-icons left">location_on</i>CO3 Residence (Panorama) Jl. Kapt. Abdul Hamid No. 86, Bandung, West Java, Indonesia.</li>
               </div>
             </div>
           </ul>
@@ -300,7 +299,7 @@ if (isset($_POST['keyword2'])) {
       </div>
     </div>
   </footer>
-  <footer>
+  <footer class="font20">
     <div class="footer-copyright">
       <div class="container center-align">
         &copy; 2020 - didapatria

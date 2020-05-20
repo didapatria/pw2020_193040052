@@ -78,8 +78,8 @@ if (isset($_POST['submit'])) {
       <div class="row">
         <div class="col s6 vh100 valign-wrapper center-align bg-primary white-text">
           <div class="m-auto">
-            <h2>Selamat Datang</h2>
-            Kelola data masakan dan resep masakan melalui iFood Admin Panel
+            <h2 class="font-PermanentMarker">Selamat Datang</h2>
+            <span class="font24">Kelola data masakan dan resep masakan melalui iFood Admin Panel</span>
           </div>
         </div>
         <div class="col s6 right-align">

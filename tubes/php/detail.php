@@ -43,7 +43,7 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
   <!-- Header -->
   <header>
     <nav class="center-align">
-      <a href="index.php" class="brand-logo">
+      <a href="../index.php" class="brand-logo">
         <div class="hero-logo">
           <img src="../assets/img/logo.png">
           <span class="logo-title2">iFood</span>
@@ -59,12 +59,12 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
     <div class="col s12 m7">
       <div class="row">
         <div class="col">
-          <h2 class="header" id="font-PermanentMarker">Detail</h2>
+          <h2 class="header font-PermanentMarker">Detail</h2>
         </div>
       </div>
       <div class="card horizontal">
         <div class="card-image">
-          <img src="../assets/img/<?= $foods['foto'] ?>">
+          <img src="../assets/img/galeri/<?= $foods['foto'] ?>">
         </div>
         <div class="card-stacked">
           <div class="card-content">
@@ -74,7 +74,7 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
             <p>Cara Masak : <?= $foods['caramasak'] ?></p>
           </div>
           <div class="card-action">
-            <a href="../index.php" class="btn btn-small waves-effect waves-light" type="submit" name="ubah">
+            <a href="../index.php" class="btn btn-small waves-effect waves-light white-text" type="submit" name="ubah">
               Kembali
             </a>
           </div>
@@ -84,14 +84,15 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
   </div>
   <br>
   <br>
+  <br>
 
   <!-- Footer -->
-  <footer class="contact-footer">
+  <footer class="contact-footer font18">
     <div class="container">
       <div class="row">
-        <div class="col l4 s12">
+        <div class="col l5 s12">
           <h5 class="white-text">
-            <a href="index.php" class="brand-logo">
+            <a href="../index.php" class="brand-logo">
               <div class="hero-logo">
                 <img src="../assets/img/logo.png">
                 <span class="logo-title2">iFood</span>
@@ -105,18 +106,18 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
             Adinda Fadhil Patria
           </p>
         </div>
-        <div class="col l4 offset-l1 s12">
+        <div class="col l3 offset-l1 s12">
           <h5 class="white-text">Contact</h5>
           <ul>
             <div class="row">
-              <div class="col mb-10">
-                <li><i class="material-icons left">location_on</i>CO3 Residence (Panorama) Jl. Kapt. Abdul Hamid No. 86, Bandung, West Java, Indonesia.</li>
-              </div>
               <div class="col mb-10">
                 <li><i class="material-icons left">phone</i>Phone: (+62)819 1260 1216</li>
               </div>
               <div class="col mb-10">
                 <li><i class="material-icons left">email</i>Email: didapatria3@gmail.com</li>
+              </div>
+              <div class="col mb-10">
+                <li><i class="material-icons left">location_on</i>CO3 Residence (Panorama) Jl. Kapt. Abdul Hamid No. 86, Bandung, West Java, Indonesia.</li>
               </div>
             </div>
           </ul>
@@ -187,7 +188,7 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
       </div>
     </div>
   </footer>
-  <footer>
+  <footer class="font20">
     <div class="footer-copyright">
       <div class="container center-align">
         &copy; 2020 - didapatria

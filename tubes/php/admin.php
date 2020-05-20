@@ -78,19 +78,19 @@ $foods = query("SELECT * FROM foods");
   <main class="open">
     <div class="row">
       <div class="col">
-        <h2 class="mb-0">Selamat Datang
+        <h2 class="mb-0"><span class="font-PermanentMarker">Selamat Datang</span>
           <br />di iFood Administrator Panel
         </h2>
       </div>
     </div>
     <div class="row">
-      <div class="col s7">
-        <p>
+      <div class="col s7 font24">
+        <p class="roboto">
           Melalui panel administrator ini kamu bisa melakukan
           pengolahan master data seperti tambah data, ubah data dan hapus data, seperti data masakan,
           hingga data pengguna.
         </p>
-        <p>
+        <p class="roboto">
           Website ini dikerjakan untuk memenuhi salah satu tugas Pemrograman Web.
         </p>
         <div class="divider" style="margin-top:50px;"></div>

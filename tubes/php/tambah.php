@@ -127,26 +127,30 @@ if (isset($_POST['tambah'])) {
                     </div>
                   </div>
                   <div class="">
-                    <img src="../assets/img/jonathan-pielmayer-Gn64mz9hTqE-unsplash.jpg" height="250" class="img-preview">
+                    <img src="../assets/img/default.jpg" height="250" class="img-preview">
                   </div>
                 </div>
               </div>
-              <div class="row mb-0">
+              <div class="row mb-0 mt-10">
                 <div class="input-field col s12">
                   <input id="food_porsi" type="text" class="validate" name="porsi" placeholder=" " autocomplete="off">
                   <label for="food_porsi">Porsi</label>
                 </div>
               </div>
               <div class="row mb-0">
+                <div class="col">
+                  <label>Bahan Masakan</label>
+                </div>
                 <div class="input-field col s12">
                   <textarea id="food_bahan" class="materialize-textarea" name="bahan" placeholder=" " autocomplete="off"></textarea>
-                  <label for="food_bahan">Bahan Masakan</label>
                 </div>
               </div>
               <div class="row mb-0">
+                <div class="col">
+                  <label>Cara Memasak</label>
+                </div>
                 <div class="input-field col s12">
                   <textarea id="food_cara" class="materialize-textarea" name="caramasak" placeholder=" " autocomplete="off"></textarea>
-                  <label for="food_cara">Cara Memasak</label>
                 </div>
               </div>
               <div class="row mb-0">

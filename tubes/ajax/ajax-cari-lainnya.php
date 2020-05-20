@@ -19,7 +19,7 @@ $foods = keyword2($_GET['keyword2']);
           <div class="col s3">
             <div class="card small">
               <div class="card-image">
-                <img class="activator img-cover" src="assets/img/<?= $food['foto'] ?>">
+                <img class="activator img-cover" src="assets/img/galeri/<?= $food['foto'] ?>">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4"><?= $food['nama'] ?></span>
