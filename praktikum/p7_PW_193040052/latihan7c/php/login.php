@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
         setcookie('hash', $hash, time() + 60 * 60 * 24);
       }
 
-      if (hash('sha256', $row['id']) == $_SESSION['hasil']) {
+      if (hash('sha256', $row['id']) == $_SESSION['hash']) {
         header("Location: admin.php");
         die;
       }

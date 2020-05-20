@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
       $_SESSION['username'] = $_POST['username'];
       $_SESSION['hash'] = $row['id'];
     }
-    if ($row['id'] == $_SESSION['hasil']) {
+    if ($row['id'] == $_SESSION['hash']) {
       header("Location: admin.php");
       die;
     }

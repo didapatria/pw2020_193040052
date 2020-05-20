@@ -82,9 +82,6 @@ $foods = query("SELECT * FROM foods WHERE id = $id")[0];
       </div>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
 
   <!-- Footer -->
   <footer class="contact-footer font18">
