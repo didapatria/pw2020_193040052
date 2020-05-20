@@ -1,0 +1,70 @@
+body {
+  background: url('../assets/img/bg-index.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+
+/* nav {
+  background-color: transparent;
+} */
+.menu {
+  width: 50px;
+  /* position: absolute;
+  z-index: 999; */
+}
+
+.ma-0 {
+  margin: 0px;
+}
+.ma-20 {
+  margin: 20px;
+}
+.mt-0 {
+  margin-top: 0px;
+}
+
+.sidenav {
+  width: 600px;
+}
+.sidenav-img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10%;
+}
+
+.font80 {
+  font-size: 80px;
+}
+.sidenav li>a {
+  font-size: 24px;
+}
+.sidenav li>a.about{
+  font-size: 30px;
+  padding: 0 18px;
+}
+ul.sub .pertemuan {
+  font-size: 24px;
+  padding: 0 32px;
+}
+.sidenav li>a.latihan {
+  padding: 0 44px;
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin:-60px 0 0 -60px;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

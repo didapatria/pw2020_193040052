@@ -73,6 +73,8 @@ if (isset($_POST['cari'])) {
     </div>
   </div>
 
+  <footer><a style="color: #fff; text-shadow: 1px 1px #F0F0F0; font-size: 14px; font-family: cursive" href="../">Kembali ke Index</a></footer>
+
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>

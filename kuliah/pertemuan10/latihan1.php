@@ -54,6 +54,8 @@ $mahasiswa = $rows;
       </tr>
     <?php endforeach; ?>
   </table>
+
+  <footer><a style="color: #fff; text-shadow: 1px 1px #F0F0F0; font-size: 14px; font-family: cursive" href="../">Kembali ke Index</a></footer>
 </body>
 
 </html>

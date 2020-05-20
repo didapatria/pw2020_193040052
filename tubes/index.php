@@ -298,6 +298,7 @@ if (isset($_POST['keyword2'])) {
         </div>
       </div>
     </div>
+    <a style="color: #fff; text-shadow: 1px 1px #F0F0F0; font-size: 14px; font-family: cursive" href="../">Kembali ke Index</a>
   </footer>
   <footer class="font20">
     <div class="footer-copyright">
